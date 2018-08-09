@@ -18,6 +18,7 @@ The biggest hurdle of this assignment was to get around 40 Queries/second limit 
 
 **Example**
 
+```
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: *
 Access-Control-Expose-Headers: ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After
@@ -36,3 +37,4 @@ X-RateLimit-Limit: 40
 ##X-RateLimit-Remaining: 32
 ##X-RateLimit-Reset: 1493827035
 Connection: keep-alive
+```
