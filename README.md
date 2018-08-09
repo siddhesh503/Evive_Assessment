@@ -5,6 +5,7 @@ Table of Contents
 
 * [General Description](#general-description)
 * [Instructions For Execution](#instructions-for-execution)
+* [Miscellaneous Notes](#miscellaneous-notes)
 
 
 
@@ -51,3 +52,9 @@ Connection: keep-alive
 2. Extract the zip file in your home directory
 3. cd Evive_Assessment
 4. Run this command: `python evive.py`
+
+
+## Miscellaneous Notes
+
+* My current count is 247 but it might be different when you execute it, as, TMDB keeps updating and adding to their data constantly.
+* I have tried to make my code as modularized as possible and to avoid as much code duplication as possible and hence all of my utility functions are in the `utils` package in `utils.py` file.
