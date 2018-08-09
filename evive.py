@@ -63,9 +63,10 @@ counter = 1
 
 cast_id_list_tv = utils.get_total_cast_ids("tv",counter,tv_id_list,X_RateLimit_Remaining,X_RateLimit_Reset,cast_id_list_tv)
 
-
-
 cast_id_list_tv = list(set(cast_id_list_tv))
+
+
+###########################################showing results!!#################################################3
 print('------------------------------ count is -----------------------------------')
 print(len(set(cast_id_list_tv).intersection(set(cast_id_list))))
 print('--------------------------execution time is-----------------------------')

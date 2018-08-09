@@ -14,7 +14,6 @@ def get_media_ids(page_number,media_type,query_params):
 		response = requests.get(url, headers={'User-Agent':'my agent'})
 		response_json =response.json()
 		results = response_json['results']
-		total_pages = response_json['total_pages']
 		print(response.headers)
 		print(page_number)
 		id_set = set()
