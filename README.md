@@ -35,8 +35,8 @@ X-Memc-Age: 25954
 X-Memc-Expires: 2846
 X-Memc-Key: a7a8be33582080c3e162cfcb93607b73
 X-RateLimit-Limit: 40
-## X-RateLimit-Remaining: 32
-## X-RateLimit-Reset: 1493827035
+X-RateLimit-Remaining: 32
+X-RateLimit-Reset: 1493827035
 Connection: keep-alive
 ```
 Rather than keeping a fixed timeout after the request limit gets exhuasted for a current time winodw, I am keeping a dynamic timeout based on the values of the headers. For example, if we exhaust all the 40 requests in 7 seconds, then my script will wait for only `(10-7=3)` `3` seconds until I make a next request, rather than waiting for a fixed amount of time. This model improves the running time of the script by more than 50%. 
