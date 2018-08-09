@@ -10,7 +10,11 @@ Table of Contents
 
 ## General Description
 
-The biggest hurdle of this assignment was to get around 40 Queries per 10 seconds limit of TMDB API. I handled this by keeping a tab on `X-RateLimit-Reset` and `X-RateLimit-Remaining` headers of the response. Following is the example of how Response headers look:
+The biggest hurdle of this assignment was to get around 40 Queries per 10 seconds limit of TMDB API. I handled this by keeping a tab on `X-RateLimit-Reset` and `X-RateLimit-Remaining` headers of the response.
+
+Rather than keeping a fixed timeout after the request limit gets exhuasted for a current time winodw, I am keeping a dynamic timeout based on the values of the headers. For example, if we exhaust all the 40 requests in 7 seconds, then my script will wait for only `(10-7=3)` `3` seconds until I make a next request, rather than waiting for a fixed amount of time. This model improves the running time of the script by more than 50%.
+
+Following is the example of how Response headers look:
 
 **Headers Notes**
 
@@ -39,7 +43,7 @@ X-RateLimit-Remaining: 32
 X-RateLimit-Reset: 1493827035
 Connection: keep-alive
 ```
-Rather than keeping a fixed timeout after the request limit gets exhuasted for a current time winodw, I am keeping a dynamic timeout based on the values of the headers. For example, if we exhaust all the 40 requests in 7 seconds, then my script will wait for only `(10-7=3)` `3` seconds until I make a next request, rather than waiting for a fixed amount of time. This model improves the running time of the script by more than 50%. 
+ 
 
 ## Instructions For Execution
 
