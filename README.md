@@ -13,8 +13,8 @@ The biggest hurdle of this assignment was to get around 40 Queries/second limit 
 
 **Headers Notes**
 
-`X-RateLimit-Reset` : denotes the time at which current window will expire
-`X-RateLimit-Reset` : denotes the number of requests remaining in the current time window.
+* `X-RateLimit-Reset` : denotes the time at which current window will expire.
+* `X-RateLimit-Reset` : denotes the number of requests remaining in the current time window.
 
 **Example**
 
