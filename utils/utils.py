@@ -15,7 +15,7 @@ def dynamic_delay(X_RateLimit_Reset):
 	print('------------------inside delay---------------')
 	print(X_RateLimit_Reset)
 	print(calendar.timegm(time.gmtime()))
-	time.sleep(X_RateLimit_Reset - calendar.timegm(time.gmtime())+1) #adding 1 seconds is just to add a buffer just to be safe
+	time.sleep(abs(X_RateLimit_Reset - calendar.timegm(time.gmtime()))+1) #adding 1 seconds is just to add a buffer just to be safe
 	print(calendar.timegm(time.gmtime()))
 
 """
@@ -95,7 +95,6 @@ def get_total_media_ids(query_params,media_type):
 	while page_number <= total_pages and page_number <=1000 :
 		if X_RateLimit_Remaining == 0:
 			try:
-				print('------------------inside delay---------------')
 				dynamic_delay(X_RateLimit_Reset)
 				X_RateLimit_Remaining = 1 # assigning any non zero value to make the for loop go forward and to not enter this if block again unless necessary
 			except Exception as e:
