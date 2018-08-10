@@ -3,10 +3,15 @@
 Table of Contents
 =================
 
+* [Requirements](#requirements)
 * [General Description](#general-description)
 * [Instructions For Execution](#instructions-for-execution)
 * [Miscellaneous Notes](#miscellaneous-notes)
 
+
+## Requirements
+
+* Python 2.7.0 or higher
 
 
 ## General Description
