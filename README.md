@@ -65,7 +65,7 @@ Connection: keep-alive
 * I have tried to make my code as modularized as possible and to avoid as much code duplication as possible and hence all of my utility functions are in the `utils` package in `utils.py` file.
 * API results are duplicated across different pages. This affects the resultant count. I am attaching the example of this phenomenon in this documentation. Following are the API results for pages 51 and 52. Ids that are duplicated Are: `{513352, 489297, 500770}`
 
-## Page: 51
+# Page: 51
 ```
 {
 	'page': 51,
@@ -375,7 +375,7 @@ Connection: keep-alive
 }
 ```
 
-## Page: 52
+# Page: 52
 ```
 {
 	'page': 52,
