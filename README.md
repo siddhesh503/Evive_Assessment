@@ -25,7 +25,7 @@ Following is the example of how Response headers look:
 **Headers Notes**
 
 * `X-RateLimit-Reset` : denotes the time at which current window will expire.
-* `X-RateLimit-Reset` : denotes the number of requests remaining in the current time window.
+* `X-RateLimit-Remaining` : denotes the number of requests remaining in the current time window.
 
 **Example**
 
